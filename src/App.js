@@ -5,15 +5,18 @@ import ToDoList from "./components/ToDoList";
 import AddToDo from "./components/AddToDo";
 
 //STYLE Start
+const AppTitle = styled.h1`
+  color: #edeaea;
+`;
+
 const AppContainer = styled.div`
   text-align: center;
-  background-color: #333;
   min-height: 100vh;
-  padding: 20px;
   font-size: calc(10px + 2vmin);
   color: rgba(255, 255, 255, 0.925);
   display: flex;
   flex-direction: column;
+  align-items: center;
 `;
 //STYLE End
 
@@ -21,7 +24,7 @@ function App() {
   return (
     <AppContainer>
       <GlobalStyles />
-      <h1>To Do List</h1>
+      <AppTitle>To Do List</AppTitle>
       <ToDoList />
       <AddToDo />
     </AppContainer>

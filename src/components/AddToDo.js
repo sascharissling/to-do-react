@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "@emotion/styled";
-import ToDoList from "./ToDoList";
 
 //STYLE Start
 const TaskSubmit = styled.form`
@@ -9,12 +8,19 @@ const TaskSubmit = styled.form`
 
 const TaskInput = styled.input`
   border-radius: 5px;
+  height: 40px;
+  width: 200px;
+  background: #bbbbbb;
 `;
 
 const SubmitButton = styled.button`
-  width: auto;
-  background-color: white;
-  border-radius: 5px;
+  border: 1px solid white;
+  background: #fab337;
+  border-radius: 15px;
+  height: 40px;
+  width: 100px;
+  font-weight: 600px;
+  font-family: "Source Sans Pro", sans-serif;
 `;
 
 //STYLE End
@@ -23,8 +29,12 @@ export default function AddToDo(todo) {
   return (
     <div>
       <TaskSubmit>
-        <TaskInput type="text" placeholder="Add Task ..." value={todo.title} />
-        <SubmitButton>Push</SubmitButton>
+        <TaskInput
+          type="text"
+          placeholder="Task Name . . ."
+          value={todo.title}
+        />
+        <SubmitButton>Add Task</SubmitButton>
       </TaskSubmit>
     </div>
   );
